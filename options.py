@@ -1,5 +1,5 @@
 import time
-from funcs import splitter
+from funcs import splitter, counter_word
 
 def options_intro():
     print("Welcome to; File contents reader!")
@@ -23,4 +23,8 @@ def options_oneContinue():
         print("Input text...")
         txt = input("> ")
         if txt != "" or txt != None:
-            pass
+            print("Choose an option!")
+            print("1. Word counter")
+            ans = input("> ")
+            if ans == "1":
+                print(f"There are {counter_word((splitter(txt)))} words")
